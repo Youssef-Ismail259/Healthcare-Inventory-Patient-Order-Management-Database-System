@@ -1,0 +1,96 @@
+Triggers, Procedures, Function explanation
+
+Triggers
+
+1) Subtract number of product ordered from inventory after each order
+
+2) set total_price in prder_detail table by multiplying quantity (order_detail table) with price of the product (product table)
+
+3) update total_price (patient_order table) by adding cost of all products bought in a single order
+
+4) prevent negative inventory
+
+---------------------------------------------------------------------------------------------------------------------------------------
+procedures
+
+1)  get patient orders
+CALL GetPatientOrders(1);
+
+2) get patient orders detail: 
+CALL GetPatientOrderDetails(1);
+
+3) update product price: 
+CALL UpdateProductPrice(1, 150); -- Replace 1 with the actual Product_ID and 150 with the new price
+
+4) create order: Creating an order for Patient with ID 1, ordering Product 3 with quantity 5
+CALL CreateOrder(1, 3, 5);
+
+5) get product inventory (stock left): 
+CALL GetProductInventory(1); 
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+Function
+            
+1) function to get supplier info for a product
+
+SELECT GetProductSupplierInfo(1) AS SupplierInfo;
+
+
+2) function to Get Patient Information:
+
+SELECT GetPatientInfo(1) AS PatientInfo;
+
+
+3) get product detail
+SELECT GetProductDetails(1) AS ProductDetails;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1) grab supplier info from inputting product id
+-- Assuming you have a Product with Product_ID = 1
+SELECT GetProductSupplierInfo(1) AS SupplierInfo;
+
+2) see all orders a patient have ordered
+-- Assuming you have a Patient with Patient_ID = 1
+CALL GetPatientOrderDetails(1);
+
+3)
